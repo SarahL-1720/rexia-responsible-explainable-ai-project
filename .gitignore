@@ -2,3 +2,4 @@
 .venv
 .rexia_venv
 data
+**/celeba-dataset
