@@ -13,7 +13,7 @@ This project is part of the REXAI (Responsible Explainable AI) lecture at Centra
 
 ### Installation
 
-We recommand using python 3.12 or higher with a virtual environment. You can install the required libraries using pip:
+We recommand using python `>=3.10` or higher with a virtual environment. You can install the required libraries using pip:
 
 ```bash
 pip install -r requirements.txt
