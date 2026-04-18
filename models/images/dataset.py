@@ -75,3 +75,18 @@ class CelebASmilingDataset(Dataset):
         image = self.__load_image(self.image_ids[idx])
         label = self.labels[idx]
         return self.transform(image), label
+    
+    def sample(self, N_sample: int = 5, random_state=None) -> "CelebASmilingDataset":
+        rng = np.random.default_rng(random_state)
+        indices = rng.choice(len(self.data), size=N_sample, replace=False)
+        
+        subset = CelebASmilingDataset.__new__(CelebASmilingDataset)
+        subset.data       = self.data.iloc[indices].reset_index(drop=True)
+        subset.attributes = self.attributes[
+            self.attributes["image_id"].isin(subset.data["image_id"])
+        ]
+        subset.img_dir    = self.img_dir
+        subset.transform  = self.transform
+        subset.image_ids  = self.image_ids[indices]
+        subset.labels     = self.labels[indices]
+        return subset
