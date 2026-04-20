@@ -7,7 +7,10 @@ This project is part of the REXAI (Responsible Explainable AI) lecture at Centra
 ## Steps of the Project
 
 1. **Sequence 1**: Application to tabulat data on human resources (HR dataset).
-2. **Sequence 2**: To come...
+2. **Sequence 2**: Application to images
+3. **Sequence 3** : Application to textual data
+
+All this steps are in the file `main_notebook.py`.
 
 ## Usage
 
